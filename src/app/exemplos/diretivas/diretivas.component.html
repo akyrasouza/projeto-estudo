@@ -1,43 +1,43 @@
-<seção>
-  <h3>* ngIf</h3>
-  <p * ngIf= "oculto!">
- Lorem ipsum dolor sit amet, consetetur elit adipisicing. Reiciendis
- inventore eius amet tempore. Est voluptatem praesentium nisi quidem, itaque
- officiis quaerat alias perspiciatis ducimus eos illo consequuntur non odit
- nam!
+<section>
+  <h3>*ngIf</h3>
+  <p *ngIf="!oculto">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+    inventore eius amet tempore. Est voluptatem praesentium nisi quidem, itaque
+    officiis quaerat alias perspiciatis ducimus eos illo consequuntur non odit
+    nam!
   </p>
-  <botão (clique)= "ocultar ()" [desativado]= "oculto">Ocultar</botão>
+  <button (click)="ocultar()" [disabled]="oculto">Ocultar</button>
   <hr />
-</seção>
-<seção>
-  <h3>* ngFor</h3>
+</section>
+<section>
+  <h3>*ngFor</h3>
   <ul>
-    <li * ngFor= "deixe o item da lista; deixe i = índice">{{i}} - {{item}}</li>
+    <li *ngFor="let item of lista; let i = index">{{ i }} - {{ item }}</li>
   </ul>
   <hr />
-</seção>
+</section>
 
-<seção>
-  <h3>[(ngModel)]</h3>
-  <entrada [(ngModel)]= "alimento" />
-  <p>{{alimento}}</p>
-</seção>
+<section>
+  <h3>[( ngModel )]</h3>
+  <input [(ngModel)]="alimento" />
+  <p>{{ alimento }}</p>
+</section>
 
-<seção>
-  <h3>* ngSwitch</h3>
-  <selecione [(ngModel)]= "status">
-    <opção * ngFor= "deixe o item de alimentos" valor= "{{item}}">{{item}}</opção>
-  </selecione>
+<section>
+  <h3>*ngSwitch</h3>
+  <select [(ngModel)]="status">
+    <option *ngFor="let item of alimentos" value="{{ item }}">{{ item }}</option>
+  </select>
 
-  <div [ngSwitch]= "status">
-    <p * ngSwitchCase= "'Arroz'">
- Arroz
+  <div [ngSwitch]="status">
+    <p *ngSwitchCase="'Arroz'">
+      Arroz
     </p>
-    <p * ngSwitchCase= "'Feijão'">
- Feijão
+    <p *ngSwitchCase="'Feijão'">
+      Feijão
     </p>
-    <p * ngSwitchDefault>
- Não temos esse alimento
+    <p *ngSwitchDefault>
+      Não temos esse alimento
     </p>
   </div>
-</seção>
+</section>

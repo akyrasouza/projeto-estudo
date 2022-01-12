@@ -1,3 +1,4 @@
+import { ExemplosRoutingModule } from './exemplos-routing.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,8 @@ import { PipesComponent } from './pipes/pipes.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ExemplosRoutingModule
   ],
   exports: [
     DataBindingComponent
