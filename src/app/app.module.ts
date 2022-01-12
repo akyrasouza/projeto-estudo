@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,8 +13,7 @@ import { ExerciciosModule } from './exercicios/exercicios.module';
   ],
   imports: [
     BrowserModule,
-    ExemplosModule,
-    ExerciciosModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
