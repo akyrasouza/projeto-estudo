@@ -1,0 +1,43 @@
+<seção>
+  <h3>* ngIf</h3>
+  <p * ngIf= "oculto!">
+ Lorem ipsum dolor sit amet, consetetur elit adipisicing. Reiciendis
+ inventore eius amet tempore. Est voluptatem praesentium nisi quidem, itaque
+ officiis quaerat alias perspiciatis ducimus eos illo consequuntur non odit
+ nam!
+  </p>
+  <botão (clique)= "ocultar ()" [desativado]= "oculto">Ocultar</botão>
+  <hr />
+</seção>
+<seção>
+  <h3>* ngFor</h3>
+  <ul>
+    <li * ngFor= "deixe o item da lista; deixe i = índice">{{i}} - {{item}}</li>
+  </ul>
+  <hr />
+</seção>
+
+<seção>
+  <h3>[(ngModel)]</h3>
+  <entrada [(ngModel)]= "alimento" />
+  <p>{{alimento}}</p>
+</seção>
+
+<seção>
+  <h3>* ngSwitch</h3>
+  <selecione [(ngModel)]= "status">
+    <opção * ngFor= "deixe o item de alimentos" valor= "{{item}}">{{item}}</opção>
+  </selecione>
+
+  <div [ngSwitch]= "status">
+    <p * ngSwitchCase= "'Arroz'">
+ Arroz
+    </p>
+    <p * ngSwitchCase= "'Feijão'">
+ Feijão
+    </p>
+    <p * ngSwitchDefault>
+ Não temos esse alimento
+    </p>
+  </div>
+</seção>
